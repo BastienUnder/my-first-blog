@@ -9,20 +9,14 @@
     </div>
 
     <br>
-
-    <div>
-        <p>published: 24.06.2020, 11:01</p>
-        <h2>A New Beginning For Old Pain</h2>
-        <p>So much to say and so little time... where shall we begin</p>
-    </div>
-
-    <br>
-
-     <div>
-         <p>published: 24.06.2020, 11:04</p>
-         <h2>Mountains and Meaning</h2>
-         <p>A hostile and bone chilling world, why does it draw me like a branch down the stream holding me tight in its enveloping current?</p>
-    </div>
+    
+    {% for post in posts %}
+        <div>
+	  <p>published: {{ post.published_date }}</p>
+	  <h2><a href="">{{ post.title }}</a></h2>
+	  <p>{{ post.text|linebreaksbr }}</p>
+	<div>  
+    {% endfor %}
 
     					
   </body>
